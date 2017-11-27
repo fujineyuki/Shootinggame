@@ -1,0 +1,190 @@
+#include "stdafx.h"
+#include "Const.h"
+#include "EnemyData.h"
+EnemyData::EnemyData(){
+	DataInit();
+}
+void EnemyData::DataInit(){
+	int w = 0;
+	EnemyDataPoint = 0;
+
+	Emovetype[w] = 0;  Ex[w] = 20;  Ey[w] = -20;   EspeedX[w] = -1;  EspeedY[w] = 4; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 0;  Ex[w] = 70;  Ey[w] = -20;   EspeedX[w] = -1;  EspeedY[w] = 4; EmissileFlg[w] = 0;   w++;
+	Emovetype[w] = 0;  Ex[w] = 130;  Ey[w] = -20;   EspeedX[w] = -1;  EspeedY[w] = 4; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 0;  Ex[w] = 70;  Ey[w] = -20;   EspeedX[w] = -1;  EspeedY[w] = 4; EmissileFlg[w] = 0;   w++;
+	Emovetype[w] = 0;  Ex[w] = 130;  Ey[w] = -20;   EspeedX[w] = -1;  EspeedY[w] = 4; EmissileFlg[w] = 1;   w++;
+
+	//ÇPÇTã@
+	Emovetype[w] = 1;  Ex[w] = 225;  Ey[w] = -20;   EspeedX[w] = 0;  EspeedY[w] = 2; EmissileFlg[w] = 0;   w++;
+	Emovetype[w] = 1;  Ex[w] = 175;  Ey[w] = -20;   EspeedX[w] = 0;  EspeedY[w] = 3; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 1;  Ex[w] = 125;  Ey[w] = -20;   EspeedX[w] = 0;  EspeedY[w] = 4; EmissileFlg[w] = 0;   w++;
+	Emovetype[w] = 1;  Ex[w] = 50;  Ey[w] = -20;   EspeedX[w] = 0;  EspeedY[w] = 3; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 1;  Ex[w] = 0;  Ey[w] = -20;   EspeedX[w] = 0;  EspeedY[w] = 2; EmissileFlg[w] = 0;   w++;
+
+	//ÇOã@Å@
+	Emovetype[w] = 0;  Ex[w] = -10;  Ey[w] = 200;   EspeedX[w] = 4;  EspeedY[w] = -4; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 0;  Ex[w] = -10;  Ey[w] = 200;   EspeedX[w] = 4;  EspeedY[w] = -4; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 0;  Ex[w] = -10;  Ey[w] = 200;   EspeedX[w] = 4;  EspeedY[w] = -4; EmissileFlg[w] = 0;   w++;
+	Emovetype[w] = 0;  Ex[w] = -10;  Ey[w] = 200;   EspeedX[w] = 4;  EspeedY[w] = -4; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 0;  Ex[w] = -10;  Ey[w] = 200;   EspeedX[w] = 4;  EspeedY[w] = -4; EmissileFlg[w] = 1;   w++;
+
+	//ÇTã@  
+	Emovetype[w] = 0;  Ex[w] = 300;  Ey[w] = 200;   EspeedX[w] = -4;  EspeedY[w] = -4; EmissileFlg[w] = 0;   w++;
+	Emovetype[w] = 0;  Ex[w] = 300;  Ey[w] = 200;   EspeedX[w] = -4;  EspeedY[w] = -4; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 0;  Ex[w] = 300;  Ey[w] = 200;   EspeedX[w] = -4;  EspeedY[w] = -4; EmissileFlg[w] = 0;   w++;
+	Emovetype[w] = 0;  Ex[w] = 300;  Ey[w] = 200;   EspeedX[w] = -4;  EspeedY[w] = -4; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 0;  Ex[w] = 300;  Ey[w] = 200;   EspeedX[w] = -4;  EspeedY[w] = -4; EmissileFlg[w] = 0;   w++;
+
+	//ÇPÇOã@ 
+	Emovetype[w] = 0;  Ex[w] = 20;  Ey[w] = -20;   EspeedX[w] = 0;  EspeedY[w] = 4; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 0;  Ex[w] = 70;  Ey[w] = -20;   EspeedX[w] = 0;  EspeedY[w] = 4; EmissileFlg[w] = 0;   w++;
+	Emovetype[w] = 0;  Ex[w] = 130;  Ey[w] = -20;   EspeedX[w] = 0;  EspeedY[w] = 4; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 0;  Ex[w] = 70;  Ey[w] = -20;   EspeedX[w] = 0;  EspeedY[w] = 4; EmissileFlg[w] = 0;   w++;
+	Emovetype[w] = 0;  Ex[w] = 130;  Ey[w] = -20;   EspeedX[w] = 0;  EspeedY[w] = 4; EmissileFlg[w] = 1;   w++;
+
+	//ÇPÇTã@
+	Emovetype[w] = 1;  Ex[w] = 250;  Ey[w] = -20;   EspeedX[w] = 0;  EspeedY[w] = 4; EmissileFlg[w] = 0;   w++;
+	Emovetype[w] = 1;  Ex[w] = 200;  Ey[w] = -20;   EspeedX[w] = 0;  EspeedY[w] = 4; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 1;  Ex[w] = 150;  Ey[w] = -20;   EspeedX[w] = 0;  EspeedY[w] = 4; EmissileFlg[w] = 0;   w++;
+	Emovetype[w] = 1;  Ex[w] = 250;  Ey[w] = -20;   EspeedX[w] = 0;  EspeedY[w] = 4; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 1;  Ex[w] = 200;  Ey[w] = -20;   EspeedX[w] = 0;  EspeedY[w] = 4; EmissileFlg[w] = 0;   w++;
+
+	//ÇQÇOã@  
+	Emovetype[w] = 0;  Ex[w] = -20;  Ey[w] = 10;    EspeedX[w] = 4;  EspeedY[w] = 0; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 0;  Ex[w] = -20;  Ey[w] = 40;    EspeedX[w] = 4;  EspeedY[w] = 0; EmissileFlg[w] = 0;   w++;
+	Emovetype[w] = 0;  Ex[w] = 300;  Ey[w] = 10;    EspeedX[w] = -4;  EspeedY[w] = 0; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 0;  Ex[w] = 300;  Ey[w] = 40;    EspeedX[w] = -4;  EspeedY[w] = 0; EmissileFlg[w] = 0;   w++;
+	Emovetype[w] = 0;  Ex[w] = 130;  Ey[w] = -20;    EspeedX[w] = 0;  EspeedY[w] = 4; EmissileFlg[w] = 0;   w++;
+
+	//ÇQÇTã@
+	Emovetype[w] = 0;  Ex[w] = 100;  Ey[w] = -20;   EspeedX[w] = 4;  EspeedY[w] = 4; EmissileFlg[w] = 0;   w++;
+	Emovetype[w] = 0;  Ex[w] = 100;  Ey[w] = -20;   EspeedX[w] = 4;  EspeedY[w] = 4; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 0;  Ex[w] = 100;  Ey[w] = -20;   EspeedX[w] = 4;  EspeedY[w] = 4; EmissileFlg[w] = 0;   w++;
+	Emovetype[w] = 0;  Ex[w] = 100;  Ey[w] = -20;   EspeedX[w] = 4;  EspeedY[w] = 4; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 0;  Ex[w] = 100;  Ey[w] = -20;   EspeedX[w] = 4;  EspeedY[w] = 4; EmissileFlg[w] = 0;   w++;            //30ã@
+
+	//ÇRÇOã@ 
+	Emovetype[w] = 2;  Ex[w] = -10;  Ey[w] = 200;   EspeedX[w] = 4;  EspeedY[w] = -4; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 2;  Ex[w] = -10;  Ey[w] = 200;   EspeedX[w] = 4;  EspeedY[w] = -4; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 2;  Ex[w] = -10;  Ey[w] = 200;   EspeedX[w] = 4;  EspeedY[w] = -4; EmissileFlg[w] = 0;   w++;
+	Emovetype[w] = 2;  Ex[w] = -10;  Ey[w] = 200;   EspeedX[w] = 4;  EspeedY[w] = -4; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 2;  Ex[w] = -10;  Ey[w] = 200;   EspeedX[w] = 4;  EspeedY[w] = -4; EmissileFlg[w] = 1;   w++;
+
+	//ÇRÇTã@
+	Emovetype[w] = 0;  Ex[w] = 300;  Ey[w] = 200;   EspeedX[w] = -4;  EspeedY[w] = -4; EmissileFlg[w] = 0;   w++;
+	Emovetype[w] = 0;  Ex[w] = 300;  Ey[w] = 200;   EspeedX[w] = -4;  EspeedY[w] = -4; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 0;  Ex[w] = 300;  Ey[w] = 200;   EspeedX[w] = -4;  EspeedY[w] = -4; EmissileFlg[w] = 0;   w++;
+	Emovetype[w] = 0;  Ex[w] = 300;  Ey[w] = 200;   EspeedX[w] = -4;  EspeedY[w] = -4; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 0;  Ex[w] = 300;  Ey[w] = 200;   EspeedX[w] = -4;  EspeedY[w] = -4; EmissileFlg[w] = 0;   w++;
+	
+	//ÇSÇOã@
+	Emovetype[w]= 0;  Ex[w] = 20;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] = 70;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =130;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] = 70;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =130;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  1;   w++;
+	//ÇSÇTã@
+	Emovetype[w]= 1;  Ex[w] =250;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 1;  Ex[w] =200;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 1;  Ex[w] =150;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 1;  Ex[w] =250;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 1;  Ex[w] =200;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;
+	//ÇTÇOã@
+	Emovetype[w]= 0;  Ex[w] =-20;  Ey[w] = 10;    EspeedX[w] =  4;  EspeedY[w] =  0;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] =-20;  Ey[w] = 40;    EspeedX[w] =  4;  EspeedY[w] =  0;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =300;  Ey[w] = 10;    EspeedX[w] = -4;  EspeedY[w] =  0;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] =300;  Ey[w] = 40;    EspeedX[w] = -4;  EspeedY[w] =  0;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =150;  Ey[w] =-20;    EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;
+	//ÇTÇTã@
+	Emovetype[w]= 0;  Ex[w] =100;  Ey[w] = -20;   EspeedX[w] =  4;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =100;  Ey[w] = -20;   EspeedX[w] =  4;  EspeedY[w] =  4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] =100;  Ey[w] = -20;   EspeedX[w] =  4;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =100;  Ey[w] = -20;   EspeedX[w] =  4;  EspeedY[w] =  4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] =100;  Ey[w] = -20;   EspeedX[w] =  4;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;            //60ã@
+	//ÇUÇOã@
+	Emovetype[w]= 0;  Ex[w] =-10;  Ey[w] = 200;   EspeedX[w] =  4;  EspeedY[w] = -4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] =-10;  Ey[w] = 200;   EspeedX[w] =  4;  EspeedY[w] = -4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] =-10;  Ey[w] = 200;   EspeedX[w] =  4;  EspeedY[w] = -4;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =-10;  Ey[w] = 200;   EspeedX[w] =  4;  EspeedY[w] = -4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] =-10;  Ey[w] = 200;   EspeedX[w] =  4;  EspeedY[w] = -4;EmissileFlg[w] =  1;   w++;
+	//ÇUÇTã@
+	Emovetype[w]= 0;  Ex[w] =300;  Ey[w] = 200;   EspeedX[w] = -4;  EspeedY[w] = -4;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =300;  Ey[w] = 200;   EspeedX[w] = -4;  EspeedY[w] = -4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] =300;  Ey[w] = 200;   EspeedX[w] = -4;  EspeedY[w] = -4;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =300;  Ey[w] = 200;   EspeedX[w] = -4;  EspeedY[w] = -4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] =300;  Ey[w] = 200;   EspeedX[w] = -4;  EspeedY[w] = -4;EmissileFlg[w] =  0;   w++;
+	//ÇVÇOã@
+	Emovetype[w]= 0;  Ex[w] = 20;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] = 70;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =130;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] = 70;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =130;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  1;   w++;
+	//ÇVÇTã@
+	Emovetype[w]= 0;  Ex[w] =250;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =200;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] =150;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =250;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] =200;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;
+	//ÇWÇOã@
+	Emovetype[w]= 0;  Ex[w] =-20;  Ey[w] = 10;    EspeedX[w] =  4;  EspeedY[w] =  0;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] =-20;  Ey[w] = 40;    EspeedX[w] =  4;  EspeedY[w] =  0;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =300;  Ey[w] = 10;    EspeedX[w] = -4;  EspeedY[w] =  0;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] =300;  Ey[w] = 40;    EspeedX[w] = -4;  EspeedY[w] =  0;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =150;  Ey[w] =-20;    EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;
+	//ÇWÇTã@
+	Emovetype[w]= 0;  Ex[w] =100;  Ey[w] = -20;   EspeedX[w] =  4;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =100;  Ey[w] = -20;   EspeedX[w] =  4;  EspeedY[w] =  4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] =100;  Ey[w] = -20;   EspeedX[w] =  4;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =100;  Ey[w] = -20;   EspeedX[w] =  4;  EspeedY[w] =  4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] =100;  Ey[w] = -20;   EspeedX[w] =  4;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;
+	//ÇXÇOã@
+	Emovetype[w]= 2;  Ex[w] =-10;  Ey[w] = 200;   EspeedX[w] =  4;  EspeedY[w] = -4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 2;  Ex[w] =-10;  Ey[w] = 200;   EspeedX[w] =  4;  EspeedY[w] = -4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 2;  Ex[w] =-10;  Ey[w] = 200;   EspeedX[w] =  4;  EspeedY[w] = -4;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 2;  Ex[w] =-10;  Ey[w] = 200;   EspeedX[w] =  4;  EspeedY[w] = -4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 2;  Ex[w] =-10;  Ey[w] = 200;   EspeedX[w] =  4;  EspeedY[w] = -4;EmissileFlg[w] =  1;   w++;
+	//ÇPÇOÇOã@
+	Emovetype[w]= 0;  Ex[w] =300;  Ey[w] = 200;   EspeedX[w] = -4;  EspeedY[w] = -4;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =300;  Ey[w] = 200;   EspeedX[w] = -4;  EspeedY[w] = -4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] =300;  Ey[w] = 200;   EspeedX[w] = -4;  EspeedY[w] = -4;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =300;  Ey[w] = 200;   EspeedX[w] = -4;  EspeedY[w] = -4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] =300;  Ey[w] = 200;   EspeedX[w] = -4;  EspeedY[w] = -4;EmissileFlg[w] =  0;   w++;
+	//ÇPÇOÇTã@
+	Emovetype[w]= 0;  Ex[w] = 20;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] = 70;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =130;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] = 70;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =130;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  1;   w++;
+	//ÇPÇPÇOã@
+	Emovetype[w]= 0;  Ex[w] =250;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =200;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] =150;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =250;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] =200;  Ey[w] = -20;   EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;
+	//ÇPÇPÇTã@
+	Emovetype[w]= 0;  Ex[w] =-20;  Ey[w] = 10;    EspeedX[w] =  4;  EspeedY[w] =  0;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] =-20;  Ey[w] = 40;    EspeedX[w] =  4;  EspeedY[w] =  0;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =300;  Ey[w] = 10;    EspeedX[w] = -4;  EspeedY[w] =  0;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] =300;  Ey[w] = 40;    EspeedX[w] = -4;  EspeedY[w] =  0;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =150;  Ey[w] =-20;    EspeedX[w] =  0;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;
+	//ÇPÇQÇOã@
+	Emovetype[w]= 0;  Ex[w] =100;  Ey[w] = -20;   EspeedX[w] =  4;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =100;  Ey[w] = -20;   EspeedX[w] =  4;  EspeedY[w] =  4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] =100;  Ey[w] = -20;   EspeedX[w] =  4;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;
+	Emovetype[w]= 0;  Ex[w] =100;  Ey[w] = -20;   EspeedX[w] =  4;  EspeedY[w] =  4;EmissileFlg[w] =  1;   w++;
+	Emovetype[w]= 0;  Ex[w] =100;  Ey[w] = -20;   EspeedX[w] =  4;  EspeedY[w] =  4;EmissileFlg[w] =  0;   w++;            //120ã@
+
+	//125ã@Å@
+	Emovetype[w] = 0;  Ex[w] = -10;  Ey[w] = 200;   EspeedX[w] = 10;  EspeedY[w] = -4; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 0;  Ex[w] = -10;  Ey[w] = 200;   EspeedX[w] = 10;  EspeedY[w] = -4; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 0;  Ex[w] = -10;  Ey[w] = 200;   EspeedX[w] = 10;  EspeedY[w] = -4; EmissileFlg[w] = 0;   w++;
+	Emovetype[w] = 0;  Ex[w] = -10;  Ey[w] = 200;   EspeedX[w] = 10;  EspeedY[w] = -4; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 0;  Ex[w] = -10;  Ey[w] = 200;   EspeedX[w] = 10;  EspeedY[w] = -4; EmissileFlg[w] = 1;   w++;
+
+	//130ã@  
+	Emovetype[w] = 0;  Ex[w] = 300;  Ey[w] = 200;   EspeedX[w] = -10;  EspeedY[w] = -4; EmissileFlg[w] = 0;   w++;
+	Emovetype[w] = 0;  Ex[w] = 300;  Ey[w] = 200;   EspeedX[w] = -10;  EspeedY[w] = -4; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 0;  Ex[w] = 300;  Ey[w] = 200;   EspeedX[w] = -10;  EspeedY[w] = -4; EmissileFlg[w] = 0;   w++;
+	Emovetype[w] = 0;  Ex[w] = 300;  Ey[w] = 200;   EspeedX[w] = -10;  EspeedY[w] = -4; EmissileFlg[w] = 1;   w++;
+	Emovetype[w] = 0;  Ex[w] = 300;  Ey[w] = 200;   EspeedX[w] = -10;  EspeedY[w] = -4; EmissileFlg[w] = 0;   w++;
+}

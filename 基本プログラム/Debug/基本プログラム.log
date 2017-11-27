@@ -1,0 +1,31 @@
+﻿2017/11/22 15:37:20 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\Users\4163212\Desktop\テーマプログラム\Direct X\ShootingGame\基本プログラム\基本プログラム.vcxproj" (Build ターゲット)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\基本プログラム.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Game.cpp
+         Game.cpp
+     1>c:\users\4163212\desktop\テーマプログラム\direct x\shootinggame\基本プログラム\game.cpp(24): warning C4244: '引数' : 'float' から 'int' への変換です。データが失われる可能性があります。
+     1>c:\users\4163212\desktop\テーマプログラム\direct x\shootinggame\基本プログラム\game.cpp(25): warning C4244: '引数' : 'float' から 'int' への変換です。データが失われる可能性があります。
+     1>c:\users\4163212\desktop\テーマプログラム\direct x\shootinggame\基本プログラム\game.cpp(26): warning C4244: '引数' : 'float' から 'int' への変換です。データが失われる可能性があります。
+     1>c:\users\4163212\desktop\テーマプログラム\direct x\shootinggame\基本プログラム\game.cpp(27): warning C4244: '引数' : 'float' から 'int' への変換です。データが失われる可能性があります。
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\4163212\Desktop\テーマプログラム\Direct X\ShootingGame\Debug\基本プログラム.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\4163212\Desktop\テーマプログラム\Direct X\ShootingGame\Debug\基本プログラム.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\4163212\Desktop\テーマプログラム\Direct X\ShootingGame\Debug\基本プログラム.lib" /MACHINE:X86 "Debug\基本プログラム.res"
+         Debug\BackMap.obj
+         Debug\Blast.obj
+         Debug\Enemy.obj
+         Debug\EnemyData.obj
+         Debug\Game.obj
+         Debug\HitCheak.obj
+         Debug\InitDX.obj
+         Debug\Jiki.obj
+         Debug\Msg.obj
+         Debug\Option.obj
+         Debug\smallJiki.obj
+         Debug\SpAitem.obj
+         Debug\stdafx.obj
+         "Debug\基本プログラム.obj"
+         基本プログラム.vcxproj -> C:\Users\4163212\Desktop\テーマプログラム\Direct X\ShootingGame\Debug\基本プログラム.exe
+     1>プロジェクト "C:\Users\4163212\Desktop\テーマプログラム\Direct X\ShootingGame\基本プログラム\基本プログラム.vcxproj" (Build ターゲット) のビルドが完了しました。
+
+ビルドに成功しました。
+
+経過時間 00:00:00.74
