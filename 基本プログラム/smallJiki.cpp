@@ -9,6 +9,7 @@
 #pragma comment(lib, "winmm.lib")
 JIkismall::JIkismall(){
 	LoadTexture();
+	LoadTexture1();
 	SJiki_X = 160;
 	SJiki_Y = 270;
 	DataInit();
@@ -36,12 +37,12 @@ int JIkismall::LoadTexture(){
 	return TRUE;
 }
 int JIkismall::LoadTexture1(){
-	HRESULT hr;
-	char path[100];
-	wsprintfA(path, "gazo\\btl_3.bmp");
-	hr = D3DXCreateTextureFromFileExA(
+	HRESULT hr1;
+	char path1[100];
+	wsprintfA(path1, "gazo\\small.png");
+	hr1 = D3DXCreateTextureFromFileExA(
 		pD3DDevice,
-		path,
+		path1,
 		0, 0, 0, 0,
 		D3DFMT_A1R5G5B5,
 		D3DPOOL_MANAGED,
@@ -50,7 +51,7 @@ int JIkismall::LoadTexture1(){
 		D3DCOLOR_ARGB(255, 255, 255, 255),
 		NULL, NULL,
 		&jikiGazo1);
-	if (hr != D3D_OK){
+	if (hr1 != D3D_OK){
 		MessageBoxA(NULL, "画像が読み込めません", "エラー", MB_OK);
 		return FALSE;
 	}
@@ -65,11 +66,15 @@ float JIkismall::MoveY(int Op_Y){//左の移動
 	SJiki_Y = Op_Y - 30;
 	return 1;
 }
+int JIkismall::retX(){ return SJiki_X; }
+int JIkismall::retY(){ return SJiki_Y; }
+
 void JIkismall::JikiPaint(){
 	RECT         r;
-	SetRect(&r, 0, 0, 64, 64);
+	SetRect(&r, 0, 0, 25, 32);
 	pSprite->Begin(0);
-	D3DXVECTOR3 pos = D3DXVECTOR3((float)SJiki_X, (float)SJiki_Y, 0.0f);
+	D3DXVECTOR3 pos = D3DXVECTOR3((float)SJiki_X + 14
+		, (float)SJiki_Y, 0.0f);
 	pSprite->Draw(jikiGazo1, &r, NULL, &pos, D3DCOLOR_ARGB(255, 255, 255, 255));//スプライトの描画
 	pSprite->End();
 }

@@ -13,7 +13,7 @@ Game::Game(){//オブジェクトの作成
 	enemy = new Enemy(jiki);
 	blast = new Blast();
 	Options = new Option(jiki, enemy, blast);
-	hitcheak = new HitCheak(jiki, enemy,blast,SpAitems);
+	hitcheak = new HitCheak(jiki, enemy,blast,SpAitems,SJiki);
 	msg = new Msg();
 	GameFlg = GAME_NOTREADY;
 	GameScore = 0;
@@ -38,9 +38,9 @@ void Game::GameControl(){//画像描画
 	backmap->backMapping();
 	jiki->JikiPaint();
 	jiki->JMissilePaint();
-	//SJiki->SetJMissile();
-	//SJiki->JikiPaint();
-	//SJiki->JMissilePaint();
+	SJiki->SetJMissile();
+	SJiki->JikiPaint();
+	SJiki->JMissilePaint();
 	enemy->EnemyPaint();
 	enemy->EMisslePaint();
 	Options->OptionPaint();

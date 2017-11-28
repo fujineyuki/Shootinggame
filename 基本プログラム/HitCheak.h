@@ -3,6 +3,7 @@
 #include "Const.h"
 #include "Blast.h"
 #include "SpAitem.h"
+#include "smallJiki.h"
 
 class HitCheak{
 private:
@@ -11,9 +12,10 @@ private:
 	Blast   *blast;
 	SpAitem *spAitems;
 	Option  *optiion;
+	JIkismall   *sjiki;
 	int hit;
 public :
-	HitCheak(JIki   *, Enemy   *,Blast    *,SpAitem    *);
+	HitCheak(JIki   *, Enemy   *,Blast    *,SpAitem    *,JIkismall  *);
 	int JMissileVsEnemy(int x,int y);
 	void  JikiVsEMissile();
 };
