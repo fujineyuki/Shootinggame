@@ -72,6 +72,7 @@ void Enemy::EnemyMove(){
 				if (EmissileFlg[p] > 5){
 					SetMissile(Ex[p], Ey[p]);
 					EmissileFlg[p] = 1;
+
 				}
 			}
 		}

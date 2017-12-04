@@ -11,6 +11,7 @@
 #include "SpAitem.h"
 #include "Option.h"
 #include "smallJiki.h"
+#include "ssjiki.h"
 
 class Game : public InitDX{
 private:
@@ -23,6 +24,7 @@ private:
 	SpAitem *SpAitems;
 	Option  *Options;
 	JIkismall *SJiki;
+	ssjiki    *Ssjiki;
 	int GameFlg;
 	int x, y;
 	float Op_X, Op_Y;

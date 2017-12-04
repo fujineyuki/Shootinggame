@@ -33,12 +33,12 @@ int SpAitem::LoadTexture(){
 }
 int  SpAitem::SetAitem(){
 	WaitCount++;
-	if (WaitCount < 50)return X;
+	if (WaitCount < 60)return X;
 	WaitCount = 0;
 	if (SpM == false){
 		Y = 0; SpM = true;
 		std::random_device rnd;
-		X = rnd() % 250;
+		X = rnd() % 218 + 32;
 		ball = rnd() % 12 + 1;
 		
 	}

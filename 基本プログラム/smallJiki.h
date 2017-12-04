@@ -9,6 +9,7 @@ private:LPDIRECT3DTEXTURE9 jikiGazo;
 		int WaitCount;
 		int JikiLife;
 		int Op_X, Op, Y;
+		bool SP1;
 		JIki *jiki;
 		
 public:
@@ -29,7 +30,8 @@ public:
 	void SetJMissile();
 	void JMissileMove();
 	void JMissilePaint();
-	void SetLife(int);
+	void resetLife();
 	void DownLife();
-	int retLife();
+	void startLift();
+	bool retLife();
 };

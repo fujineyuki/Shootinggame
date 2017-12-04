@@ -4,6 +4,7 @@
 #include "Blast.h"
 #include "SpAitem.h"
 #include "smallJiki.h"
+#include "ssjiki.h"
 
 class HitCheak{
 private:
@@ -13,9 +14,11 @@ private:
 	SpAitem *spAitems;
 	Option  *optiion;
 	JIkismall   *sjiki;
+	ssjiki      *Ssjiki;
+	bool shit,sshit,sp;
 	int hit;
 public :
-	HitCheak(JIki   *, Enemy   *,Blast    *,SpAitem    *,JIkismall  *);
+	HitCheak(JIki   *, Enemy   *,Blast    *,SpAitem    *,JIkismall  *,ssjiki    *);
 	int JMissileVsEnemy(int x,int y);
 	void  JikiVsEMissile();
 };

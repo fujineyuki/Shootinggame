@@ -14,6 +14,7 @@ JIkismall::JIkismall(){
 	SJiki_Y = 270;
 	DataInit();
 	WaitCount = 5;
+	startLift();
 }
 int JIkismall::LoadTexture(){
 	HRESULT hr;
@@ -70,29 +71,34 @@ int JIkismall::retX(){ return SJiki_X; }
 int JIkismall::retY(){ return SJiki_Y; }
 
 void JIkismall::JikiPaint(){
-	RECT         r;
-	SetRect(&r, 0, 0, 25, 32);
-	pSprite->Begin(0);
-	D3DXVECTOR3 pos = D3DXVECTOR3((float)SJiki_X + 14
-		, (float)SJiki_Y, 0.0f);
-	pSprite->Draw(jikiGazo1, &r, NULL, &pos, D3DCOLOR_ARGB(255, 255, 255, 255));//スプライトの描画
-	pSprite->End();
+	if (JikiLife > 0 ){
+		RECT         r;
+		SetRect(&r, 0, 0, 25, 32);
+		pSprite->Begin(0);
+		D3DXVECTOR3 pos = D3DXVECTOR3((float)SJiki_X + 14
+			, (float)SJiki_Y, 0.0f);
+		pSprite->Draw(jikiGazo1, &r, NULL, &pos, D3DCOLOR_ARGB(255, 255, 255, 255));//スプライトの描画
+		pSprite->End();
+	}
+	else SP1 = false;
 }
 
 void JIkismall::DataInit(){
 	for (int i = 0; i < JMISSILE_SU; i++) JMsw[i] = false;
 }
 void JIkismall::SetJMissile(){
-	WaitCount++;
-	if (WaitCount < 5)return;
-	WaitCount = 0;
-	for (int i = 0; i < JMISSILE_SU; i++)
-		if (JMsw[i] == false){
-			JMsw[i] = true;
-			JMx[i] = SJiki_X + 20;
-			jMy[i] = SJiki_Y;
-			return;
-		}
+	if (JikiLife > 0){
+		WaitCount++;
+		if (WaitCount < 5)return;
+		WaitCount = 0;
+		for (int i = 0; i < JMISSILE_SU; i++)
+			if (JMsw[i] == false){
+				JMsw[i] = true;
+				JMx[i] = SJiki_X + 20;
+				jMy[i] = SJiki_Y;
+				return;
+			}
+	}
 }
 void JIkismall::JMissileMove(){
 	for (int i = 0; i < JMISSILE_SU; i++){
@@ -102,26 +108,34 @@ void JIkismall::JMissileMove(){
 	}
 }
 void JIkismall::JMissilePaint(){
-	D3DXVECTOR3    pos;
-	RECT    r;
-	SetRect(&r, 53, 0, 53 + JIKIMISSILE_W, JIKIMISSILE_H);
-	JMissileMove();
-	pSprite->Begin(0);
-	for (int i = 0; i < JMISSILE_SU; i++){
-		if (JMsw[i] == true){
-			pos = D3DXVECTOR3((float)JMx[i], (float)jMy[i], 0.0f);
-			pSprite->Draw(jikiGazo, &r, NULL, &pos, D3DCOLOR_ARGB(255, 255, 255, 255));//スプライトの描画
+	if (JikiLife > 0 ){
+		D3DXVECTOR3    pos;
+		RECT    r;
+		SetRect(&r, 53, 0, 53 + JIKIMISSILE_W, JIKIMISSILE_H);
+		JMissileMove();
+		pSprite->Begin(0);
+		for (int i = 0; i < JMISSILE_SU; i++){
+			if (JMsw[i] == true){
+				pos = D3DXVECTOR3((float)JMx[i], (float)jMy[i], 0.0f);
+				pSprite->Draw(jikiGazo, &r, NULL, &pos, D3DCOLOR_ARGB(255, 255, 255, 255));//スプライトの描画
+			}
 		}
-	}
 
-	pSprite->End();
+		pSprite->End();
+	}
+	else SP1 = false;
 }
-void JIkismall::SetLife(int _life){
-	JikiLife = _life;
+void JIkismall::resetLife(){
+	JikiLife = 5;
+	SP1 = true;
+}
+void JIkismall::startLift(){
+	SP1 = false;
+	JikiLife = 0;
 }
 void JIkismall::DownLife(){
 	JikiLife--;
 }
-int JIkismall::retLife(){
-	return JikiLife;
+bool JIkismall::retLife(){
+	return SP1;
 }

@@ -8,12 +8,12 @@ Game::Game(){//オブジェクトの作成
 	backmap = new BackMap();
 	jiki    = new JIki();
 	SJiki = new JIkismall();
+	Ssjiki = new ssjiki();
 	SpAitems = new SpAitem();
-	
 	enemy = new Enemy(jiki);
 	blast = new Blast();
 	Options = new Option(jiki, enemy, blast);
-	hitcheak = new HitCheak(jiki, enemy,blast,SpAitems,SJiki);
+	hitcheak = new HitCheak(jiki, enemy,blast,SpAitems,SJiki,Ssjiki);
 	msg = new Msg();
 	GameFlg = GAME_NOTREADY;
 	GameScore = 0;
@@ -21,10 +21,10 @@ Game::Game(){//オブジェクトの作成
 void Game::InputKey(){//キーごとの呼び出し
 	unsigned char m[256];
 	GetKeyboardState(m);
-	if (m[VK_RIGHT] & 0x80){ Op_X = jiki->MoveRight(); SJiki->MoveX(Op_X); Options->cX1(Op_X); }
-	if (m[VK_LEFT] & 0x80){ Op_X = jiki->MoveLeft();SJiki->MoveX(Op_X); Options->cX1(Op_X); }
-	if (m[VK_DOWN] & 0x80){ Op_Y = jiki->MoveDown();SJiki->MoveY(Op_Y); Options->cY1(Op_Y); }
-	if (m[VK_UP] & 0x80){ Op_Y = jiki->MoveUp();SJiki->MoveY(Op_Y); Options->cY1(Op_Y); }
+	if (m[VK_RIGHT] & 0x80){ Op_X = jiki->MoveRight(); SJiki->MoveX(Op_X); Ssjiki->MoveX(Op_X); Options->cX1(Op_X); }
+	if (m[VK_LEFT] & 0x80){ Op_X = jiki->MoveLeft(); SJiki->MoveX(Op_X); Ssjiki->MoveX(Op_X); Options->cX1(Op_X); }
+	if (m[VK_DOWN] & 0x80){ Op_Y = jiki->MoveDown(); SJiki->MoveY(Op_Y); Ssjiki->MoveY(Op_Y); Options->cY1(Op_Y); }
+	if (m[VK_UP] & 0x80){ Op_Y = jiki->MoveUp(); SJiki->MoveY(Op_Y); Ssjiki->MoveY(Op_Y); Options->cY1(Op_Y); }
 	if (m['X'] & 0x80)jiki->SetJMissile();
 	if (m['Z'] & 0x80){
 		GameFlg = GAME_READY;	PlaySoundA("sound\\Narration-Hanyou_GameStart_02.wav", NULL, (SND_ASYNC | SND_FILENAME));
@@ -41,6 +41,9 @@ void Game::GameControl(){//画像描画
 	SJiki->SetJMissile();
 	SJiki->JikiPaint();
 	SJiki->JMissilePaint();
+	Ssjiki->SetJMissile();
+	Ssjiki->JikiPaint();
+	Ssjiki->JMissilePaint();
 	enemy->EnemyPaint();
 	enemy->EMisslePaint();
 	Options->OptionPaint();
@@ -67,6 +70,8 @@ void Game::GameControl(){//画像描画
 		WaitCount = 0;
 		GameFlg = GAME_PLAY;
 		jiki->SetLife(JIKI_LIFE);
+		SJiki->startLift();
+		Ssjiki->startLift();
 		jiki->DataInit();
 		enemy->DataInit();
 		Options->reset();

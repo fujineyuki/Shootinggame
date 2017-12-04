@@ -75,6 +75,9 @@
     <ClInclude Include="smallJiki.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="ssjiki.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="基本プログラム.cpp">
@@ -117,6 +120,9 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="smallJiki.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ssjiki.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>

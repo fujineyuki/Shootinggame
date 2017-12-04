@@ -150,7 +150,7 @@ int  Option::HitCheakOption(float  x, float   y, int q){
 			if (x < ex && ex < x + 32){
 				if (y < ey && ey < y + 32){
 					blast->setBlast(ex, ey);
-					if (hit[q] >= 10){
+					if (hit[q] >= 5){
 						enemy->EMsw[i] = false;
 						blast->setBlast(ex, ey);
 						baria[q] = false;

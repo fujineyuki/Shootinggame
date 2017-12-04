@@ -11,11 +11,11 @@
 #define EMISSILE_H    16
 #define BASE_SPEED    6
 #define JMISSILE_SU   8
-#define EMISSILE_SU   20
+#define EMISSILE_SU   30
 #define ENEMY_SU      140
 #define MAPENEMY_SU   5
 #define GAME_CLAER    999
-#define JIKI_LIFE     30
+#define JIKI_LIFE     8
 #define GAME_NOTREADY 0
 #define GAME_READY    1
 #define GAME_PLAY     2
